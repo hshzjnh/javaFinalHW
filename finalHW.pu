@@ -1,0 +1,126 @@
+@startuml
+package "myorganism" #Yellow{
+class Organism {
+    #Position mypos;
+    #boolean queuing;
+    #String id; 
+    +void setpos();
+    +void setId();
+    +String getId();
+    +void setQueuing();
+}
+class Huluwa {
+    #String rank;
+    #String color;
+    #int num;
+
+}
+class Monster {
+    
+}
+class Scorpion {
+}
+class Position<T> {
+    -int x;
+    -int y;
+    -T creature;
+    +void set();
+    +void get();
+}
+Red--|>Huluwa
+Orange--|>Huluwa
+Yellow--|>Huluwa
+Green--|>Huluwa
+Indigo--|>Huluwa
+Blue--|>Huluwa
+Purple--|>Huluwa
+Huluwa--|>Organism
+Grandfather--|>Organism
+Monster--|>Organism
+Scorpion--|>Organism
+Snack--|>Organism
+BattleMap..>Position
+Position..->Organism
+class BattleMap {
+    -Position position;
+    -int size;
+    -int mid;
+    -int monsterNum;
+    -Vector<Monster> monsters;
+    -Vector<Scorpion> scorpions;
+    +void initmap()
+    +void setCharacters()
+    +void run()
+    +void startBattle()
+}
+
+}
+package "huluqabattle" #Green{
+class Controller {
+    * ExecutorService exec;
+    * InitModule initModule=new InitModule();
+    * OrganismSerial organismSerial;
+}
+class Main
+{
+     +void start()
+     +void main()
+}
+class OrganismSerial
+{
+
+}
+Controller..>OrganismSerial
+Main..>Controller
+
+}
+
+
+package "organismdata" #Blue{
+class Detail
+{
+
+}
+class Record
+{
+
+}
+class OrganismData{
+
+}
+Record..>Detail
+
+}
+package "myinterfaces" #Orange{
+Interface CreatureActions{
+    + void move()
+    +void die()
+    +void deductHP()
+}
+Interface CreatureThread{
+    +void exitThread()
+}
+Interface CreatureUI
+{
+    +void setLayout()
+	+void moveImage()
+	+void setImageVisible()
+}
+Interface OrgansimSettings{
+	enum STATUS {MOVE,ATTACK,DIE,FIGHTING,WAIT, HULUWAWIN, MONSTERWIN};
+	+void setStatus();
+	+void setModeReplay();
+	+void setMonsterGoal() ;
+	+void setMonsterKilled() ;
+	+void setData();
+	+void setRecord() ;
+}
+}
+Controller..>organismdata
+huluqabattle..>myorganism
+Organism..|>CreatureActions
+Organism..|>OrgansimSettings
+Organism..|>CreatureThread
+Organism..|>CreatureUI
+
+@enduml

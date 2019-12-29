@@ -20,6 +20,8 @@
 ### File->Open File（快捷键 L）
 
 打开文件对话框，选择一个记录读取，按**空格**回放
+默认打开位置是src\\main\\outputFiles
+战斗记录放在此处
 
 ## 功能介绍
 
@@ -221,6 +223,8 @@ BattleMap: 管理战斗地图
 ## 项目结构
 
 项目名为HuluwaProject,是用Maven管理的JavaFX项目
+
+![uml](finalhwuml.png)
 
 ```java
  HuluwaProject/
