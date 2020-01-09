@@ -6,14 +6,15 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
+import java.io.File;
 import java.util.Vector;
 
 public class Red<T extends Organism> extends Huluwa{
-    public ImageView fist=new ImageView(new Image("file:src\\main\\resources\\image\\fist.png"));
+    public ImageView fist=new ImageView(new Image("file:src"+File.separator+"main"+File.separator+"resources"+File.separator+"image"+File.separator+"fist.png"));
     public Red(){
         super();
         num=1;
-        imageView=new ImageView(new Image("file:src\\main\\resources\\image\\red.png"));
+        imageView=new ImageView(new Image("file:src"+File.separator+"main"+File.separator+"resources"+File.separator+"image"+File.separator+"red.png"));
         getChildren().addAll(imageView);
         getChildren().addAll(fist);
         fist.setVisible(false);

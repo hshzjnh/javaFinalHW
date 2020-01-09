@@ -4,13 +4,14 @@ import huluwabattle.Controller;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.io.File;
 import java.util.Vector;
 
 public class Blue extends Huluwa{
     public Blue(){
         super();
         num=6;
-        imageView=new ImageView(new Image("file:src\\main\\resources\\image\\blue.png"));
+        imageView=new ImageView(new Image("file:src"+File.separator+"main"+File.separator+"resources"+File.separator+"image"+File.separator+"blue.png"));//src\\main\\resources\\image\\blue.png"));
         getChildren().addAll(imageView);
         myData.setAtk(700);
         myData.setDef(120);

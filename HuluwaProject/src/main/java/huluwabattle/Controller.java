@@ -111,7 +111,7 @@ public class Controller <T extends Organism> {
     }
     public void setBackground()
     {
-        BackgroundImage myBI= new BackgroundImage(new Image("file:resource\\image\\background2.png"),
+        BackgroundImage myBI= new BackgroundImage(new Image("file:resource"+File.separator+"image"+File.separator+"background2.png"),
                 BackgroundRepeat.REPEAT, BackgroundRepeat.NO_REPEAT, BackgroundPosition.DEFAULT, BackgroundSize.DEFAULT);
         anchorPane2.setBackground(new Background(myBI));
     }
@@ -219,7 +219,7 @@ public class Controller <T extends Organism> {
         try {
 
             FileChooser fileChooser = new FileChooser();
-            fileChooser.setInitialDirectory(new File("src\\main\\outputfiles"));
+            fileChooser.setInitialDirectory(new File("src"+File.separator+"main"+File.separator+"outputfiles"));
             fileChooser.getExtensionFilters().addAll(
                     new FileChooser.ExtensionFilter("SER", "*.ser")
             );
@@ -242,7 +242,7 @@ public class Controller <T extends Organism> {
         try {
 
             FileChooser fileChooser = new FileChooser();
-            fileChooser.setInitialDirectory(new File("src\\main\\outputfiles"));
+            fileChooser.setInitialDirectory(new File("src"+File.separator+"main"+File.separator+"outputfiles"));
             fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("SER", "*.ser"));
             fileChooser.setTitle("Open File");
             File selectedFile = fileChooser.showOpenDialog(mainApp.stage);

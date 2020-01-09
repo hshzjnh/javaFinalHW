@@ -12,19 +12,19 @@ import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
 import javafx.util.Duration;
 
-
+import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Vector;
 import java.util.concurrent.Semaphore;
 
 public class Orange<T extends Organism> extends Huluwa{
-    public ImageView arrow=new ImageView(new Image("file:src\\main\\resources\\image\\orangeATK.png"));
+    public ImageView arrow=new ImageView(new Image("file:src"+File.separator+"main"+File.separator+"resources"+File.separator+"image"+File.separator+"orangeATK.png"));
     public Orange(){
         super();
      
         num=2;
-        imageView=new ImageView(new Image("file:src\\main\\resources\\image\\orange.png"));
+        imageView=new ImageView(new Image("file:src"+File.separator+"main"+File.separator+"resources"+File.separator+"image"+File.separator+"orange.png"));
         getChildren().addAll(imageView);
         myAnchorPane.getChildren().addAll(arrow);
         myData.setAtk(1070);

@@ -15,6 +15,7 @@ import organismdata.OrganismData;
 import organismdata.Detail.EVENT;
 
 import java.awt.*;
+import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Random;
@@ -26,11 +27,11 @@ public class Monster <T extends Organism> extends Organism implements CreatureAc
     {
         super();
         direction=DIRECTION.LEFT;
-        imageView=new ImageView(new Image("file:src\\main\\resources\\image\\Monster_.png"));
-        deadImage=new ImageView(new Image("file:src\\main\\resources\\image\\deadMonster.png"));
+        imageView=new ImageView(new Image("file:src"+File.separator+"main"+File.separator+"resources"+File.separator+"image"+File.separator+"Monster_.png"));
+        deadImage=new ImageView(new Image("file:src"+File.separator+"main"+File.separator+"resources"+File.separator+"image"+File.separator+"deadMonster.png"));
         deadImage.setVisible(false);
         getChildren().addAll(imageView,deadImage);
-        myData.setAtk(600);
+        myData.setAtk(1000);
         myData.setDef(220);
         myData.setHp(2000);
         myData.setMaxHp(2000);

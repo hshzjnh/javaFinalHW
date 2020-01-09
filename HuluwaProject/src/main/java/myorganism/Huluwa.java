@@ -15,6 +15,7 @@ import myinterfaces.OrganismSettings.STATUS;
 import organismdata.Detail;
 import organismdata.Detail.EVENT;
 
+import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.*;
@@ -25,7 +26,7 @@ public class Huluwa <T extends Organism> extends Organism implements CreatureAct
     protected int num;
     public Huluwa() {
         direction=DIRECTION.RIGHT;
-        deadImage=new ImageView(new Image("file:src\\main\\resources\\image\\deadHuluwa.png"));
+        deadImage=new ImageView(new Image("file:src"+File.separator+"main"+File.separator+"resources"+File.separator+"image"+File.separator+"deadHuluwa.png"));
         deadImage.setVisible(false);
         getChildren().addAll(deadImage);
         //type=Species.HULUWA;

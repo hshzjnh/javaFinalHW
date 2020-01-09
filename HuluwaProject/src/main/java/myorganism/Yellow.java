@@ -6,6 +6,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
+import java.io.File;
 import java.util.Vector;
 
 public class Yellow<T extends Organism> extends Huluwa{
@@ -13,7 +14,7 @@ public class Yellow<T extends Organism> extends Huluwa{
     public Yellow(){
         super();
         num=3;
-        imageView=new ImageView(new Image("file:src\\main\\resources\\image\\yellow_shield.png"));
+        imageView=new ImageView(new Image("file:src"+File.separator+"main"+File.separator+"resources"+File.separator+"image"+File.separator+"yellow_shield.png"));
         getChildren().addAll(imageView);
         myData.setAtk(300);
         myData.setDef(520);

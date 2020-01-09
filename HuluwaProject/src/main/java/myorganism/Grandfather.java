@@ -6,6 +6,8 @@ import organismdata.Detail;
 import organismdata.Detail.EVENT;
 
 import javax.lang.model.type.NullType;
+
+import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Vector;
@@ -13,7 +15,7 @@ import java.util.Vector;
 public class Grandfather<T extends Organism> extends Organism{
     public Grandfather(){
         super();
-        imageView=new ImageView(new Image("file:src\\main\\resources\\image\\grandfather.png"));
+        imageView=new ImageView(new Image("file:src"+File.separator+"main"+File.separator+"resources"+File.separator+"image"+File.separator+"grandfather.png"));
         getChildren().addAll(imageView);
         myData.setAtk(200);
         myData.setDef(1000);

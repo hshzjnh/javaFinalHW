@@ -7,13 +7,14 @@ import myorganism.Organism.DIRECTION;
 import organismdata.Detail;
 import organismdata.Detail.EVENT;
 
+import java.io.File;
 import java.util.Vector;
 
 public class Scorpion<T extends Organism> extends Monster<Organism> {
     public Scorpion() {
     	direction=DIRECTION.LEFT;
-        imageView=new ImageView(new Image("file:src\\main\\resources\\image\\scorpion.png"));
-        deadImage=new ImageView(new Image("file:src\\main\\resources\\image\\deadScorpion.png"));
+        imageView=new ImageView(new Image("file:src"+File.separator+"main"+File.separator+"resources"+File.separator+"image"+File.separator+"scorpion.png"));
+        deadImage=new ImageView(new Image("file:src"+File.separator+"main"+File.separator+"resources"+File.separator+"image"+File.separator+"deadScorpion.png"));
         deadImage.setVisible(false);
         getChildren().clear();
         getChildren().addAll(imageView,deadImage);

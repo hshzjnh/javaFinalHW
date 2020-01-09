@@ -8,7 +8,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
-
+import java.io.File;
 import java.util.Vector;
 import java.util.concurrent.Semaphore;
 
@@ -16,11 +16,11 @@ public class Indigo<T extends Organism> extends Huluwa{
     public ImageView[] waterColumns=new ImageView[5];
     public Indigo(){
         num=5;
-        imageView=new ImageView(new Image("file:src\\main\\resources\\image\\indigo.png"));
+        imageView=new ImageView(new Image("file:src"+File.separator+"main"+File.separator+"resources"+File.separator+"image"+File.separator+"indigo.png"));
         getChildren().addAll(imageView);
         for(int i=0;i<5;i++)
         {
-            waterColumns[i]=new ImageView(new Image("file:src\\main\\resources\\image\\watercolumn.gif"));
+            waterColumns[i]=new ImageView(new Image("file:src"+File.separator+"main"+File.separator+"resources"+File.separator+"image"+File.separator+"watercolumn.gif"));
             waterColumns[i].setVisible(false);
             getChildren().addAll(waterColumns[i]);
         }

@@ -7,6 +7,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
 
+import java.io.File;
 import java.util.Vector;
 import java.util.concurrent.Semaphore;
 
@@ -15,11 +16,11 @@ public class Green<T extends Organism> extends Huluwa{
     public Green(){
         super();
         num=4;
-        imageView=new ImageView(new Image("file:src\\main\\resources\\image\\green.png"));
+        imageView=new ImageView(new Image("file:src"+File.separator+"main"+File.separator+"resources"+File.separator+"image"+File.separator+"green.png"));
         getChildren().addAll(imageView);
         for(int i=0;i<5;i++)
         {
-            fireBalls[i]=new ImageView(new Image("file:src\\main\\resources\\image\\fireball.gif"));
+            fireBalls[i]=new ImageView(new Image("file:src"+File.separator+"main"+File.separator+"resources"+File.separator+"image"+File.separator+"fireball.gif"));
             fireBalls[i].setVisible(false);
             getChildren().addAll(fireBalls[i]);
         }
